@@ -1,0 +1,69 @@
+.formP {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 5px solid transparent;
+    background: black;
+    border: 0.7vw solid transparent;
+    border-radius: 15px;
+    background-image: 
+        radial-gradient(circle, rgb(23, 23, 22) 10%, rgb(45, 47, 45) 100%),
+        linear-gradient(140deg, blueviolet 0%, rgba(238,232,6) 30%, rgba(59,226,16) 100%);
+    background-origin: border-box;
+    background-clip:  padding-box, border-box;
+    margin-top: 5%;
+    padding: 5%;
+    gap: 5%;
+    padding-top: 1%;
+   text-align: center;
+}
+
+.formP form{
+    display: flex;
+    flex-direction: column;
+    line-height: 5vh;
+    
+}
+
+.formP h1{
+    color: #38d610;
+}
+
+.formP h1:hover{
+    color: #c52dcd;
+}
+
+.formP p{
+    line-height: 1vw;
+    color: #c52dcd;
+}
+
+.formP label{
+    color: #38d610;
+    font-weight: bolder;
+}
+
+.formP button{
+    font-weight: bolder;
+    font-size: large;
+    border-radius: 10%;
+    border: 0.2vw solid transparent;
+    background: white;
+    background-image: 
+        radial-gradient(circle, rgb(33, 33, 32) 10%, rgb(45, 47, 45) 90%),
+        linear-gradient(20deg, rgba(238,232,6) 10%, rgba(59,226,16) 100%);
+    background-origin: border-box;
+    background-clip:  padding-box, border-box;
+    color: #40bb45;
+    cursor: pointer;
+}
+
+.formP button:hover{
+    color: #c52dcd;
+    transform: scale(1.25);
+}
+
+.formP img{
+    border-radius: 10%;
+    box-shadow: 1px 1px 20px rgb(43, 212, 17);
+}

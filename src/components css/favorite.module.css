@@ -1,0 +1,43 @@
+
+
+.body{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+}
+.body main {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+    justify-self: center;
+    gap: 2%;
+    width: fit-content;
+    padding: 3%;
+}
+
+.body span {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.body select{
+    background: #202020;
+    color: #31d508;
+    border: 0.3vw solid blueviolet;
+    font-size: larger;
+}
+
+.body span button {
+    background: transparent;
+    border-radius: 100%;
+    border: 0.2vw solid #31d508;
+    box-shadow: 1px 1px 20px #d1df0c;
+    padding: 1%;
+    font-size: larger;
+    font-weight: bold;
+    color: #d1df0c;
+    cursor: pointer;
+}
+

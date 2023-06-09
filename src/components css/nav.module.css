@@ -1,0 +1,64 @@
+.principal{
+    position: relative;
+    height: 20%;
+    margin-bottom: 5vh;
+}
+.searchBar{
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-left: 5%;
+}
+.imagen{
+    width: 20vw;
+    height: auto;
+}
+
+.barra {
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+    flex-wrap:wrap-reverse ;
+}
+
+.input{
+    border: 0.2vw solid blueviolet;
+    border-radius: 5%;
+    background: rgba(65, 188, 46, 0.2);
+    width: 15vw;
+    font-size: larger;
+    color: #11b527;
+    
+}
+
+.principal span {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.5% 1% 0.5% 1%;
+    gap: 7%;
+    
+}
+
+.principal button{
+    font-weight: bolder;
+    font-size: large;
+    border-radius: 10%;
+    border: 0.2vw solid transparent;
+    background: white;
+    background-image: 
+        radial-gradient(circle, rgb(33, 33, 32) 10%, rgb(45, 47, 45) 90%),
+        linear-gradient(20deg, rgba(238,232,6) 10%, rgba(59,226,16) 100%);
+    background-origin: border-box;
+    background-clip:  padding-box, border-box;
+    color: #40bb45;
+    cursor: pointer;
+}
+
+.principal span button {
+    font-weight: bolder;
+    font-size:x-large;
+    
+}
