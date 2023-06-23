@@ -1,5 +1,5 @@
 import './App.css';
-import { useState} from 'react';
+import { useState, useEffect} from 'react';
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import { removeFav } from './redux/actions';
 import { useDispatch } from 'react-redux';
@@ -23,29 +23,39 @@ function App() {
    const [access, setAccess] = useState(false);
   
 
-   function loginHandler(userData) {
-      const {email, password} = userData;
-      const URL = "http://localhost:3001/rickandmorty/login/";
-      axios(URL + `?email=${email}&password=${password}`).then(({data}) => {
-        const {access} = data; // true o false
-        setAccess(data);
-        access && navigate("/home");
-      });
-    }
+   async function loginHandler(userData) {
+      try {
+         const {email, password} = userData;
+         const URL = "http://localhost:3001/rickandmorty/login/";
+         const {data} = await axios(URL + `?email=${email}&password=${password}`)
+         const {access} = data; // true o false
+         setAccess(data);
+         access && navigate("/home");   
+      } catch (error) {
+         console.log(error)
+      }
+      
+      }
 
-   //  useEffect(() => {
-   //       !access && navigate('/')
-   //  },[access]);
+    useEffect(() => {
+         !access && navigate('/')
+    },[access]);
 
-   function onSearch(id) {
-         axios(`http://localhost:3001/rickandmorty/character/${id}`).then(({ data }) => {
-            if (data.name) {
+   async function onSearch(id) {
+
+      try {
+         const response = await axios(`http://localhost:3001/rickandmorty/character/${id}`);
+         const data = response.data;
+         if (data.name) {
                setCharacters((oldChars) => [...oldChars, data]);
             } else {
                window.alert('¡No hay personajes con este ID!');
             }
-         });
+         } catch (error) {
+         console.log(error)
+      }
    }
+         
 
    function closeHandler(id) {
       dispatch(removeFav(id))
