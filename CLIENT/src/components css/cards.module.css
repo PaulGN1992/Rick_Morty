@@ -1,0 +1,32 @@
+.contenedor {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* position: relative; */
+    justify-content: center;
+    background: black;
+    border: 1vw solid transparent;
+    border-radius: 15px;
+    background-image: 
+        radial-gradient(circle, rgb(23, 23, 22) 10%, rgb(45, 47, 45) 100%),
+        linear-gradient(140deg, blueviolet 0%, rgba(238,232,6) 30%, rgba(59,226,16) 100%);
+    background-origin: border-box;
+    background-clip:  padding-box, border-box;
+    padding: 4%;
+    padding-top: 2%;
+    margin: 7%;
+    margin-top: 1%;
+    gap: 2vw;
+    /* overflow:visible; */
+    height: auto;
+    width:fit-content;
+}
+
+@media screen and (max-width: 500px){
+    .contenedor {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content:center;
+    height: auto;
+    width: auto;
+    }
+}

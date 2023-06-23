@@ -1,0 +1,144 @@
+
+.detail {
+    display: flex;
+    width: 50vw;
+    flex-direction: row;
+    position: relative;
+    background: #11b527;
+    border: 1vw solid transparent;
+    border-radius: 10%;
+    background-image: 
+        radial-gradient(circle, rgb(33, 33, 32) 10%, rgb(45, 47, 45) 90%),
+        linear-gradient(20deg, rgba(238,232,6) 10%, rgba(59,226,16) 100%);
+    background-origin: border-box;
+    background-clip:  padding-box, border-box;
+    font-size: 12px;
+    color: blueviolet;
+    justify-content: center;
+    align-items: center;
+    padding: 3% 5% 5% 5%;
+    overflow: hidden;
+    word-wrap: break-word;    
+}
+
+.detail img {
+    display: block;
+    width: 24vw;
+    border-radius: 100%;
+    box-shadow: 1px 1px 20px rgb(43, 212, 17); 
+    margin-right: 10%; 
+}
+
+.detail img:hover{
+    box-shadow: 1px 1px 20px rgb(118, 18, 149);
+}
+
+.detail h1 {
+    font-size: 4vw;
+    color: blueviolet;
+    margin: 0.5vw;
+    background-image: linear-gradient(90.19deg, #db14db 18.61%, #8634f6 82.19%);
+    background-clip: padding-box;
+    -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+    transition: color 0.5s;
+    margin: 0;
+}
+
+.detail h1:hover {
+    background-image: linear-gradient(90deg, #cbd721 18.61%, #11b527 82.19%);
+    background-clip: padding-box;
+    -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.detail span {
+    color: #cbd721;
+    -webkit-text-stroke: 0.03em #db14db;
+}
+.footer {
+    width: 13vw;
+    background: transparent;
+    margin: 1vw;
+    border: 0.8vw;
+    border-radius: 20px 0px 10px;
+    padding: 0.1em;
+    font-size: 2vw;
+    font-weight: bold;
+    color: #11b527;
+    cursor: pointer;
+    border: 0.6vw solid yellow;
+    
+}
+
+.footer:hover {
+    color:#11b527;
+    border: 0.7vw solid blueviolet;
+    animation-name: shake;
+    -webkit-animation-name: shake;
+    -moz-animation-name: shake;
+animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+
+}
+    
+
+.detalle {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+    
+@keyframes shake {
+    0%  {transform: translate(1px, 1px) rotate(0deg);}
+    10% {transform: translate(-1px, -2px) rotate(-1deg);}
+    20% {transform: translate(-3px, 0px) rotate(1deg);}
+    30% {transform: translate(3px, 2px) rotate(0deg);}
+    40% {transform: translate(1px, -1px) rotate(1deg);}
+    50% {transform: translate(-1px, 2px) rotate(-1deg);}
+    60% {transform: translate(-3px, 1px) rotate(0deg);}
+    70% {transform: translate(3px, 1px) rotate(-1deg);}
+    80% {transform: translate(-1px, -1px) rotate(1deg);}
+    90% {transform: translate(1px, 2px) rotate(0deg);}
+    100% {transform: translate(1px, -2px) rotate(-1deg);}
+}
+
+@media (max-width: 500px){
+    .detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 5vw;
+    }
+
+    .detail img {
+         
+        margin-right: 0; 
+    }
+
+    .detail h1 {
+        padding: 1.5vw;
+        font-size: 11vw;
+    }
+
+    .detalle {
+        padding: 1vw;
+        text-align: left;
+    }
+
+    .footer{
+        width: 26vw;
+        height: auto;
+        font-size: 5vw;
+        font-weight: bold;
+    }
+}
+          
